@@ -59,6 +59,20 @@ return [
             ]) : [],
         ],
 
+        'mysql2' => [
+            'driver'    => 'mysql',
+            'host'      => env('DB_HOST2', 'localhost'),
+            'port'      => env('DB_PORT2', 3306),
+            'database'  => env('DB_DATABASE2', 'forge'),
+            'username'  => env('DB_USERNAME2', 'forge'),
+            'password'  => env('DB_PASSWORD2', ''),
+            'charset'   => env('DB_CHARSET2', 'utf8mb4'),
+            'collation' => env('DB_COLLATION2', 'utf8mb4_unicode_ci'),
+            'prefix'    => env('DB_PREFIX2', ''),
+            'timezone'  => env('DB_TIMEZONE2', '+00:00'),
+            'strict'    => env('DB_STRICT_MODE2', false),
+        ],
+
         'pgsql' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', '127.0.0.1'),
