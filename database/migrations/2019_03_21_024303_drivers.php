@@ -22,6 +22,7 @@ class Drivers extends Migration
             $table->enum('sex', ['M', 'F']);
             $table->boolean('owner_vehicle');
             $table->enum('cnh_type', ['A', 'B', 'C', 'D', 'E']);
+            $table->integer('id_address')->unsigned();
             $table->timestamps();
         });
     }
