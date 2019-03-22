@@ -115,3 +115,5 @@ Para isto foi criado Migrations e Seeds, basta executar os seguintes comandos.
 
  1. **Deixei o arquivo .env preenchido para comodidade na hora de testar o
     projeto, pois em um cenário real o .env não deve ficar versionado no Github.**
+    
+ 2. **URL para a API GoLang que faz a descoberta de CEP's e Geolocalização** (https://us-central1-promo-valor.cloudfunctions.net/truckpadGetCepAndLatLng?logradouroOrCep=R.%20Fid%C3%AAncio%20Ramos,%20302,%20Vila%20Olimpia,%20S%C3%A3o%20Paulo%20-%20SP)
