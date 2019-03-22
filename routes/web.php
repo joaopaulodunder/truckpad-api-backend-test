@@ -10,7 +10,29 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(array('prefix' => 'api/v1/'), function()
+{
+
+    Route::get('/', function () {
+        return response()->json(['message' => 'API Truckpad']);
+    });
+
+    //rotas de Morista
+    Route::post('driver', 'DriversController@createDriver');
+
+    Route::put('driver/{id}', 'DriversController@updateDriver');
+
+    Route::get('drivers', 'DriversController@searchDriversOwnervehicle');
+
+    //rotas de checkin
+    Route::post('checkin', 'TerminalCheckinController@createCheckin');
+
+    Route::get('checkin/carregado', 'TerminalCheckinController@searchCheckin');
+
+    Route::get('checkins/origemDestino', 'TerminalCheckinController@searchCheckinSourceAndDestiny');
+
+});
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('api/v1');
 });
