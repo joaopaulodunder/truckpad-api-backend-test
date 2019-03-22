@@ -24,8 +24,6 @@ class Adresses extends Migration
             $table->string('latitude', 100, 8);
             $table->string('longitude', 100, 8);
             $table->timestamps();
-
-//            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
@@ -36,6 +34,6 @@ class Adresses extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('tb_address');
     }
 }
