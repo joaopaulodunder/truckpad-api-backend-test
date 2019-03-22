@@ -17,12 +17,11 @@ class Drivers extends Migration
             $table->increments('id');
             $table->string('name');
             $table->integer('age')->unsigned();
-            $table->date(' birth');
+            $table->date('birth');
             $table->string('cpf')->unique();
             $table->enum('sex', ['M', 'F']);
-            $table->boolean('owner_vehicle');
+            $table->enum('owner_vehicle', ['YES', 'NO']);
             $table->enum('cnh_type', ['A', 'B', 'C', 'D', 'E']);
-            $table->integer('id_address')->unsigned();
             $table->timestamps();
         });
     }

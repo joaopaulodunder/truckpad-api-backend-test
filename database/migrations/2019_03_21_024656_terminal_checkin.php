@@ -19,7 +19,7 @@ class TerminalCheckin extends Migration
             $table->integer('truck_type_id')->unsigned();
             $table->integer('source_address')->unsigned();
             $table->integer('destiny_address')->unsigned();
-            $table->boolean('loaded');
+            $table->enum('loaded', ['YES', 'NO']);
             $table->foreign('driver_id')->references('id')->on('tb_drivers');
             $table->foreign('truck_type_id')->references('id')->on('tb_truck_types');
 

@@ -21,8 +21,8 @@ class Adresses extends Migration
             $table->string('state');
             $table->string('city');
             $table->string('cep');
-            $table->string('latitude', 10, 8);
-            $table->string('longitude', 10, 8);
+            $table->string('latitude', 100, 8);
+            $table->string('longitude', 100, 8);
             $table->timestamps();
 
 //            $table->foreign('user_id')->references('id')->on('users');
