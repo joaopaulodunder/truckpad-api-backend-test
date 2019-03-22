@@ -36,6 +36,22 @@ class Drivers extends Model
         return self::where('cpf', '=', $cpf)->get('id')->toArray()[0]['id'];
     }
 
+    public static function getDriverByCpf($cpf)
+    {
+        return self::where('cpf', '=', $cpf)->get(
+            [
+                'name',
+                'age',
+                'birth',
+                'cpf',
+                'sex',
+                'owner_vehicle',
+                'cnh_type'
+            ]
+        );
+    }
+
+
     public static function updateDriverById(Request $request, $id)
     {
         $driverModel = self::findOrFail($id);

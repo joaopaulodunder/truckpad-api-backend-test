@@ -22,6 +22,8 @@ Route::group(array('prefix' => 'api/v1/'), function()
 
     Route::put('driver/{id}', 'DriversController@updateDriver');
 
+    Route::get('driver/{cpf}', 'DriversController@searchDriversByCpf');
+
     Route::get('drivers', 'DriversController@searchDriversOwnervehicle');
 
     //rotas de checkin

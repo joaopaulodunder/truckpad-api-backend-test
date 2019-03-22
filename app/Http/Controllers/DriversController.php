@@ -34,6 +34,15 @@ class DriversController extends Controller
         }
     }
 
+    public function searchDriversByCpf($cpf)
+    {
+        try{
+            return response()->json(Drivers::getDriverByCpf($cpf));
+        }catch (\Exception $e){
+            return response()->json(sprintf('{"status":"ERROR", "message":"%s"}', $e->getMessage()))->setStatusCode(400);
+        }
+    }
+
     public function updateDriver(Request $request, $id)
     {
         try {

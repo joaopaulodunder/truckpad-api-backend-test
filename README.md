@@ -83,6 +83,10 @@ Para isto foi criado Migrations e Seeds, basta executar os seguintes comandos.
 
 * [GET] - http://127.0.0.1:8000/api/v1/drivers?possuiVeiculo=false
 
+**Consultar motoristas através do CPF.**
+
+* [GET] - http://127.0.0.1:8000/api/v1/driver/{cpf}
+
 **Consultar origem e destino agrupado por tipo de truck em um determinado período.**
 
 * [GET] - http://127.0.0.1:8000/api/v1/checkins/origemDestino?dtStart=YYYY-MM-DD&dtEnd=YYYY-MM-DD
